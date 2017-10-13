@@ -1,0 +1,49 @@
+//-----------------------------------------------------------------------------
+// Global and Shared Styles
+//-----------------------------------------------------------------------------
+
+body {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #D9D8D2
+}
+
+.btn {
+  font-size: 1em;
+  background-color: #56C271;
+  color: #fff;
+  border: 0;
+  padding: 0.6em 1em;
+  font-weight: 400;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+  cursor: pointer;
+
+  &.disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+  }
+}
+
+.form-row {
+  padding: 1em 0 2em;
+  background-color: #fff;
+  border-bottom: 4px solid #56C271;
+  border-top: 4px solid #56C271;
+
+  .form-fields {
+    .label {
+      font-weight: 700;
+    }
+
+    .inputs {
+      display: flex;
+      justify-content: center;
+    }
+
+    input[type="text"] {
+      font-size: 1em;
+      padding: .5em;
+    }
+  }
+}

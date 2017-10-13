@@ -1,0 +1,36 @@
+{
+  "name": "kabbage-dogs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server/index.js",
+  "scripts": {
+    "start": "node src/server/index.js",
+    "build": "./node_modules/.bin/webpack",
+    "watch": "./node_modules/.bin/webpack --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kyle Baker",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "hapi": "^16.6.2",
+    "inert": "^4.2.1",
+    "node-fetch": "^1.7.3",
+    "vue": "^2.4.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-runtime": "^6.26.0",
+    "css-loader": "^0.28.7",
+    "file-loader": "^1.1.5",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "vue-loader": "^13.3.0",
+    "vue-template-compiler": "^2.4.4",
+    "webpack": "^3.7.1"
+  }
+}
