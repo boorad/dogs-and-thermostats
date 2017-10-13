@@ -1,17 +1,13 @@
 <template>
   <section id="breed-viewer">
-
     <section id="breed-selector" class="form-row">
       <div class="fields">
-
         <div v-if="loading" class="fields-loading">
           <p>Fetching Breeds...</p>
         </div>
-
         <div v-else-if="error" class="fields-error">
           <p>{{ error }}</p>
         </div>
-
         <div v-else class="fields-form">
           <p class="label">Select a Pup Type</p>
           <form v-on:submit.prevent>
@@ -34,24 +30,19 @@
             </div>
           </form>
         </div>
-
       </div>
     </section>
-
     <breed-images ref="imagesComponent"></breed-images>
-
   </section>
 </template>
 
 <script>
-
   import BreedImages from "./BreedImages";
   import fetchBreeds from "../utils/fetch-breeds";
 
   export default {
     name: "breed-selection",
     components: {BreedImages},
-
     data() {
       return {
         error: "",
@@ -61,13 +52,11 @@
         loading: true,
       }
     },
-
     computed: {
       mainBreeds() {
         return Object.keys(this.breeds);
       },
     },
-
     methods: {
       getSubBreeds(breed) {
         return (breed in this.breeds)
@@ -84,7 +73,6 @@
         }
       }
     },
-
     watch: {
       // reset the sub-breed if the primary breed is changed so that
       // incompatible sub-breeds don't linger
@@ -92,7 +80,6 @@
         this.selectedSubBreed = "all";
       }
     },
-
     filters: {
       capitalize(v) {
         if (!v) return '';
@@ -100,7 +87,6 @@
         return v.charAt(0).toUpperCase() + v.slice(1);
       },
     },
-
     // grab the full breeds list from the api
     created() {
       // use the breeds from session storage if they exist. this is to be
@@ -124,9 +110,7 @@
         this.loading = false;
       });
     }
-
   }
-
 </script>
 
 <style lang="scss" scoped>
@@ -150,5 +134,4 @@
       padding: .4em;
     }
   }
-
 </style>

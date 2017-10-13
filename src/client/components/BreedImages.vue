@@ -1,14 +1,11 @@
 <template>
   <section id="breed-images">
-
     <div v-if="loading" class="images-loading">
       <p>Fetching Images...</p>
     </div>
-
     <div v-else-if="error" class="images-error">
       <p>{{ error }}</p>
     </div>
-
     <div v-else-if="displayedBreed" class="images-display">
       <section class="breed-images">
         <h1>{{ displayedBreed | capitalize }}</h1>
@@ -22,17 +19,14 @@
         </div>
       </section>
     </div>
-
   </section>
 </template>
 
 <script>
-
   import fetchBreedImages from "../utils/fetch-breed-images";
 
   export default {
     name: "breed-images",
-
     data() {
       return {
         error: "",
@@ -41,7 +35,6 @@
         displayedBreed: "",
       }
     },
-
     computed: {
       randomImages() {
         if (this.images.length <= 3) {
@@ -54,7 +47,6 @@
           .map(idx => this.images[idx]);
       },
     },
-
     methods: {
       fetchImages(mainBreed, subBreed) {
         this.loading = true;
@@ -72,7 +64,6 @@
         });
       }
     },
-
     filters: {
       capitalize(v) {
         if (!v) return '';
@@ -81,11 +72,9 @@
       },
     },
   }
-
 </script>
 
 <style lang="scss" scoped>
-
   .images-container {
     display: flex;
     justify-content: center;
@@ -97,6 +86,4 @@
     padding: .25em;
     width: 100%;
   }
-
-
 </style>

@@ -9,11 +9,7 @@
 </template>
 
 <script>
-
-  // global styles
   import "vue-style-loader!css-loader!sass-loader!./assets/styles.scss";
-
-  // child components
   import BreedSelection from "./components/BreedSelection";
   import Temperature from "./components/Temperature";
 
@@ -31,11 +27,9 @@
       }
     }
   }
-
 </script>
 
 <style lang="scss" scoped>
-
   #app {
     text-align: center;
     color: #2c3e50;
@@ -53,5 +47,4 @@
       }
     }
   }
-
 </style>

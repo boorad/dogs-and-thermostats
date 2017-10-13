@@ -1,15 +1,12 @@
 <template>
   <section v-if="show" id="temperature-lookup" class="form-row">
     <div class="fields">
-
       <div v-if="loading" class="temp-loading">
         <p>Fetching Temperature...</p>
       </div>
-
       <div v-else-if="error" class="temp-error">
         <p>{{ error }}</p>
       </div>
-
       <div v-else-if="temp" class="temp-suggestion">
         <p class="current">{{ temp }} &#8457;</p>
         <div v-if="tempSuggestion(temp) === 'lower'" class="temp-suggestion-lower">
@@ -34,7 +31,6 @@
           </p>
         </div>
       </div>
-
       <div class="form-fields">
         <p class="label">Enter your zip to find out the temp</p>
         <form v-on:submit.prevent>
@@ -48,13 +44,11 @@
           </div>
         </form>
       </div>
-
     </div>
   </section>
 </template>
 
 <script>
-
   import fetchTemperature from "../utils/fetch-temperature";
 
   export default {
